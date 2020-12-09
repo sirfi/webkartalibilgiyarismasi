@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Web Kartalı Bilgi Yarışması</title>
+<title>Web KartalÄ± Bilgi YarÄ±ÅŸmasÄ±</title>
 <script language="JavaScript">
 function newWindow(mypage,myname,w,h,features) {
   if(screen.width){
@@ -22,8 +22,8 @@ function newWindow(mypage,myname,w,h,features) {
 <body>
 <center>
 <input type="text" name="yadi" id="yadi" value="deneme"/><br>
-<input type="button" value="Bilgi Yarışması" style="font-size: 8pt" onclick="newWindow('bilgiyarismasi.asp?yadi='+document.getElementById('yadi').value,'yarisma',500,450)">
-<br><a href="webkartalibilgiyarismasi.zip">Bu Scripti indirmek için tıklayınız.</a>
+<input type="button" value="Bilgi YarÄ±ÅŸmasÄ±" style="font-size: 8pt" onclick="newWindow('bilgiyarismasi.asp?yadi='+document.getElementById('yadi').value,'yarisma',500,450)">
+<br><a href="webkartalibilgiyarismasi.zip">Bu Scripti indirmek iÃ§in tÄ±klayÄ±nÄ±z.</a>
 </center>
 </body>
 </html>

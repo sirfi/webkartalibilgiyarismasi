@@ -7,16 +7,16 @@ If Session("siteyoneticisi") then
 <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
-<title>Bilgi Yarışması</title>
+<title>Bilgi YarÄ±ÅŸmasÄ±</title>
 </head>
 <body>
 <table border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber1" cellpadding="0" width="750">
   <tr>
     <td width="748" align="center" colspan="2">
-    <nobr><b><font size="2"><a href="bilgiyarismasi.asp?bolum=onaylisorular"><font color="#000000">Onaylı Sorular</font></a>(<%for w=1 to 25%><a href="bilgiyarismasi.asp?bolum=onaylisorular&seviye=<%=w%>"><font color="#000000"><%=w%></font></a>-<%next%>)</font></b></nobr>&nbsp;
-    <nobr><b><font size="2"><a href="bilgiyarismasi.asp?bolum=onaysizsorular"><font color="#000000">Onaysız Sorular</font></a></font></b></nobr>&nbsp;
+    <nobr><b><font size="2"><a href="bilgiyarismasi.asp?bolum=onaylisorular"><font color="#000000">OnaylÄ± Sorular</font></a>(<%for w=1 to 25%><a href="bilgiyarismasi.asp?bolum=onaylisorular&seviye=<%=w%>"><font color="#000000"><%=w%></font></a>-<%next%>)</font></b></nobr>&nbsp;
+    <nobr><b><font size="2"><a href="bilgiyarismasi.asp?bolum=onaysizsorular"><font color="#000000">OnaysÄ±z Sorular</font></a></font></b></nobr>&nbsp;
     <nobr><b><font size="2"><a href="bilgiyarismasi.asp?bolum=soruekle"><font color="#000000">Soru Ekle</font></a></font></b></nobr>&nbsp;
-    <nobr><b><font size="2"><a href="cik.asp"><font color="#000000">Çıkış</font></a></font></b></nobr>&nbsp;
+    <nobr><b><font size="2"><a href="cik.asp"><font color="#000000">Ã‡Ä±kÄ±ÅŸ</font></a></font></b></nobr>&nbsp;
     </td>
   </tr>
 </table>
@@ -61,16 +61,16 @@ if rs.eof then exit for
 %>
   <tr>
     <td colspan="3" width="100%" valign="middle" align="center">
-Göderen : <%=rs("ekleyen")%><br>
-Tür : <%=rs("grup")%> - Seviye : <%=rs("derece")%><br>
-Cevaplanma Sayısı : <%=rs("csayisi")%> - Bilinme Sayısı : <%=rs("bsayisi")%> - Bilinme Oranı : <%if rs("csayisi")>0 then response.write("%"&int((rs("bsayisi")/rs("csayisi"))*100)) end if%><br>
+GÃ¶deren : <%=rs("ekleyen")%><br>
+TÃ¼r : <%=rs("grup")%> - Seviye : <%=rs("derece")%><br>
+Cevaplanma SayÄ±sÄ± : <%=rs("csayisi")%> - Bilinme SayÄ±sÄ± : <%=rs("bsayisi")%> - Bilinme OranÄ± : <%if rs("csayisi")>0 then response.write("%"&int((rs("bsayisi")/rs("csayisi"))*100)) end if%><br>
 Soru : <%=rs("soru")%><br>
 a)<%=rs("a")%> b)<%=rs("b")%> c)<%=rs("c")%> d)<%=rs("d")%><br>
-Doğru Cevap : <%=rs("dogru")%>
+DoÄŸru Cevap : <%=rs("dogru")%>
     </td>
   </tr>
   <tr>
-    <td width="33%" align="center"><a href="bilgiyarismasi.asp?bolum=soruduzenle&no=<%=rs("no")%>"><font color="#000000">Düzelt</font></a></td>
+    <td width="33%" align="center"><a href="bilgiyarismasi.asp?bolum=soruduzenle&no=<%=rs("no")%>"><font color="#000000">DÃ¼zelt</font></a></td>
     <td width="33%" align="center"><a href="bilgiyarismasi.asp?bolum=sorusil&no=<%=rs("no")%>"><font color="#000000">Sil</font></a></td>
     <td width="33%" align="center">
 <form method="POST" action="bilgiyarismasi.asp?bolum=sartir&no=<%=rs("no")%>" style="margin-top: 0; margin-bottom: 0">
@@ -111,7 +111,7 @@ end if
 <br><%if len(request.querystring("seviye"))>0 then
 response.write request.querystring("seviye")&". Seviye"
 else%>
-Toplam<%end if%> Onaylı Soru Sayısı : <%=usayisi%>
+Toplam<%end if%> OnaylÄ± Soru SayÄ±sÄ± : <%=usayisi%>
 <%
 	Case "onaysizsorular"
 %>
@@ -130,16 +130,16 @@ if rs.eof then exit for
 %>
   <tr>
     <td colspan="4" width="100%" valign="middle" align="center">
-Göderen : <%=rs("ekleyen")%><br>
-Tür : <%=rs("grup")%> - Seviye : <%=rs("derece")%><br>
+GÃ¶deren : <%=rs("ekleyen")%><br>
+TÃ¼r : <%=rs("grup")%> - Seviye : <%=rs("derece")%><br>
 Soru : <%=rs("soru")%><br>
 a)<%=rs("a")%> b)<%=rs("b")%> c)<%=rs("c")%> d)<%=rs("d")%><br>
-Doğru Cevap : <%=rs("dogru")%>
+DoÄŸru Cevap : <%=rs("dogru")%>
     </td>
   </tr>
   <tr>
     <td width="25%" align="center"><a href="bilgiyarismasi.asp?bolum=soruonayla&no=<%=rs("no")%>"><font color="#000000">Onayla</font></a></td>
-    <td width="25%" align="center"><a href="bilgiyarismasi.asp?bolum=soruduzenle&no=<%=rs("no")%>"><font color="#000000">Düzelt</font></a></td>
+    <td width="25%" align="center"><a href="bilgiyarismasi.asp?bolum=soruduzenle&no=<%=rs("no")%>"><font color="#000000">DÃ¼zelt</font></a></td>
     <td width="25%" align="center"><a href="bilgiyarismasi.asp?bolum=sorusil&no=<%=rs("no")%>"><font color="#000000">Sil</font></a></td>
     <td width="25%" align="center">
 <form method="POST" action="bilgiyarismasi.asp?bolum=sartir&no=<%=rs("no")%>" style="margin-top: 0; margin-bottom: 0">
@@ -173,7 +173,7 @@ if CINT(TRIM(sayfa))=CINT(TRIM(y)) then%>
 else
 response.write "<a href='bilgiyarismasi.asp?bolum=onaysizsorular&sayfa=" & y & "'>" & y & "</a>&nbsp;"
 end if
-%><%next%><br>Toplam Onaysız Soru Sayısı : <%=usayisi%>
+%><%next%><br>Toplam OnaysÄ±z Soru SayÄ±sÄ± : <%=usayisi%>
 <%
 	Case "soruekle"
 %>
@@ -181,7 +181,7 @@ end if
 <tr>
 <td width="100%" valign="middle" align="center">
 <form method="POST" style="margin-top: 0; margin-bottom: 0;" action="bilgiyarismasi.asp?bolum=sorukaydet">
-              <label><strong>Tür :
+              <label><strong>TÃ¼r :
               <input type="text" name="tur" />
               </strong></label>
               <strong><br />
@@ -221,7 +221,7 @@ end if
 		</select>
               </label>
               <br />
-		<input type="submit" value="Gönder" />
+		<input type="submit" value="GÃ¶nder" />
                 </strong>
             </form>
 </td>
@@ -252,7 +252,7 @@ end if
 		rs("c")=avla(request.form("c"))
 		rs("d")=avla(request.form("d"))
 		rs("dogru")=avla(request.form(request.form("dogru")))
-		rs("ekleyen")="Yönetim"
+		rs("ekleyen")="YÃ¶netim"
 		rs("onay")=true
 		rs("bsayisi")=0
 		rs("derece")=request.form("seviye")
@@ -260,9 +260,9 @@ end if
 		rs.update
 		rs.close
 		set rs = nothing
-		response.write("Sorunuz kaydedilmiştir.")
+		response.write("Sorunuz kaydedilmiÅŸtir.")
 		else
-		response.write("Eksik alanlar var. Geriye tıklayıp eksikleri tamamlayınız.")
+		response.write("Eksik alanlar var. Geriye tÄ±klayÄ±p eksikleri tamamlayÄ±nÄ±z.")
 		end if
 %>
 <%
@@ -274,7 +274,7 @@ Set rs = bag.Execute("SELECT sorular.* FROM sorular where sorular.no="&no&"" )
 <td width="100%" valign="middle" align="center">
 <form method="POST" style="margin-top: 0; margin-bottom: 0;" action="bilgiyarismasi.asp?bolum=soruguncelle&no=<%=no%>">
 <input type="hidden" name="referer" value="<%=Request.ServerVariables("HTTP_REFERER")%>" />
-              <label><strong>Tür :
+              <label><strong>TÃ¼r :
               <input type="text" name="tur" value="<%=rs("grup")%>" />
               </strong></label>
               <strong><br />
@@ -300,7 +300,7 @@ Set rs = bag.Execute("SELECT sorular.* FROM sorular where sorular.no="&no&"" )
               <label>D :
               <input type="text" name="d" value="<%=rs("d")%>" />
               <input name="dogru" type="radio" value="d" />
-              </label><br>Doğru Cevap : <%=rs("dogru")%><br>
+              </label><br>DoÄŸru Cevap : <%=rs("dogru")%><br>
               <label>Seviye :
 		<select name="seviye">
 		<option value="<%=rs("derece")%>"><%=rs("derece")%></option>
@@ -314,7 +314,7 @@ Set rs = bag.Execute("SELECT sorular.* FROM sorular where sorular.no="&no&"" )
 		</select>
               </label>
               <br />
-		<input type="submit" value="Gönder" />
+		<input type="submit" value="GÃ¶nder" />
                 </strong>
             </form>
 </td>
@@ -352,9 +352,9 @@ Set rs = Nothing
 		rs.update
 		rs.close
 		set rs = nothing
-		response.write("Soru güncellenmiştir.<meta http-equiv='Refresh' content='2;url="&request.form("referer")&"'>")
+		response.write("Soru gÃ¼ncellenmiÅŸtir.<meta http-equiv='Refresh' content='2;url="&request.form("referer")&"'>")
 		else
-		response.write("Eksik alanlar var. Geriye tıklayıp eksikleri tamamlayınız.")
+		response.write("Eksik alanlar var. Geriye tÄ±klayÄ±p eksikleri tamamlayÄ±nÄ±z.")
 		end if
 %>
 
@@ -363,7 +363,7 @@ Set rs = Nothing
 	Case "sorusil"
 set rs=server.CreateObject("adodb.recordset")
 rs.Open "delete from sorular where sorular.no="&no&"",bag,1,3
-response.write("Soru silinmiştir.<meta http-equiv='Refresh' content='2;url="&Request.ServerVariables("HTTP_REFERER")&"'>")
+response.write("Soru silinmiÅŸtir.<meta http-equiv='Refresh' content='2;url="&Request.ServerVariables("HTTP_REFERER")&"'>")
 %>
 <%
 	Case "sartir"
@@ -392,7 +392,7 @@ set rs=nothing
 <%
 	Case else
 %>
-Linkleri Kullanarak İşlemlerinizi Yapınız.
+Linkleri Kullanarak Ä°ÅŸlemlerinizi YapÄ±nÄ±z.
 <%
 End Select
 bag.Close

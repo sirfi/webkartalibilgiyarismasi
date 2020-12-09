@@ -12,7 +12,7 @@ bag.open("DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & veritabani)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
-<title>Bilgi Yarışması</title>
+<title>Bilgi YarÄ±ÅŸmasÄ±</title>
 <style type="text/css">
 <!--
 body {
@@ -89,10 +89,10 @@ gerisayim()
 randomize 
 rsayi=int((rnd * 10000)+ 0)
 %>
-        <td align="center" valign="middle"><%if len(request.querystring("bolum"))=0 then%>Web Kartalı Bilgi Yarışmasına Hoşgeldiniz<br />Sayın <%=Session("byadi")%><br /><%end if%>
-          <a href="?bolum=sorucevapla&rsayi=<%=rsayi%>" class="link">Başlamak İçin Tıklayınız.</a><br />
+        <td align="center" valign="middle"><%if len(request.querystring("bolum"))=0 then%>Web KartalÄ± Bilgi YarÄ±ÅŸmasÄ±na HoÅŸgeldiniz<br />SayÄ±n <%=Session("byadi")%><br /><%end if%>
+          <a href="?bolum=sorucevapla&rsayi=<%=rsayi%>" class="link">BaÅŸlamak Ä°Ã§in TÄ±klayÄ±nÄ±z.</a><br />
           <br />
-          <a href="?bolum=sorucevapla&rsayi=<%=rsayi%>" target="_self"><img src="resimler/yarismabasla.gif" alt="Yarışmaya başlamak için tıklayınız." border="0" /></a> </td>
+          <a href="?bolum=sorucevapla&rsayi=<%=rsayi%>" target="_self"><img src="resimler/yarismabasla.gif" alt="YarÄ±ÅŸmaya baÅŸlamak iÃ§in tÄ±klayÄ±nÄ±z." border="0" /></a> </td>
         <td width="15">&nbsp;</td>
       </tr>
       <tr>
@@ -130,9 +130,9 @@ rsayi=int((rnd * 10000)+ 0)
         <td width="40" align="center" valign="middle">
 		<%if session("atla")=0 then%>
 		<a href="#no" onclick="document.getElementById('joker').value='atla';document.getElementById('soruform').submit()">
-		<img src="resimler/atla.PNG" alt="Atla:Soru doğru bilinmiş sayılır ve sonraki soruya geçilir." width="38" height="38"/></a><%end if%><%if session("degistir")=0 then%><a href="#no" onclick="document.getElementById('joker').value='degistir';document.getElementById('soruform').submit()">
-		<img src="resimler/degistir.PNG" alt="Değiştir:Aynı seviyeden başka soru sorulur." width="38" height="38"/></a><%end if%><%if session("cekil")=0 then%><a href="#no" onclick="document.getElementById('joker').value='cekil';document.getElementById('soruform').submit()">
-		<img src="resimler/cekil.PNG" alt="Çekil:Puan kaybı olmadan yarışayı bitirilir." width="38" height="38"/></a><%end if%></td>
+		<img src="resimler/atla.PNG" alt="Atla:Soru doÄŸru bilinmiÅŸ sayÄ±lÄ±r ve sonraki soruya geÃ§ilir." width="38" height="38"/></a><%end if%><%if session("degistir")=0 then%><a href="#no" onclick="document.getElementById('joker').value='degistir';document.getElementById('soruform').submit()">
+		<img src="resimler/degistir.PNG" alt="DeÄŸiÅŸtir:AynÄ± seviyeden baÅŸka soru sorulur." width="38" height="38"/></a><%end if%><%if session("cekil")=0 then%><a href="#no" onclick="document.getElementById('joker').value='cekil';document.getElementById('soruform').submit()">
+		<img src="resimler/cekil.PNG" alt="Ã‡ekil:Puan kaybÄ± olmadan yarÄ±ÅŸayÄ± bitirilir." width="38" height="38"/></a><%end if%></td>
         <td width="15">&nbsp;</td>
         <td width="370" align="center" valign="middle">
 <%
@@ -142,7 +142,7 @@ rsayi=int((rnd * 10000)+ 0)
 	<form action="?bolum=kontrol&rsayi=<%=rsayi%>" method="post" name="soru" id="soruform" style="height:100%">
 		<input name="joker" type="hidden" id="joker" value="" />
 		<input name="soruno" type="hidden" id="soruno" value="<%=rs("no")%>" />
-          -<%=rs("grup")%>-Gönderen : <%=rs("ekleyen")%><br /><%=rs("soru")%><br />
+          -<%=rs("grup")%>-GÃ¶nderen : <%=rs("ekleyen")%><br /><%=rs("soru")%><br />
             <label>
               <input type="radio" name="cevap" value="<%=rs("a")%>" onclick="document.getElementById('cevapla').disabled=false"/>
               <%=rs("a")%></label>
@@ -288,19 +288,19 @@ rsayi=int((rnd * 10000)+ 0)
 randomize 
 rsayi=int((rnd * 10000)+ 0)
 %>
-	Cevap Doğru
+	Cevap DoÄŸru
 	<meta http-equiv="refresh" content="3;URL=?bolum=sorucevapla&rsayi=<%=rsayi%>">
 	<%
 	end if
 	if session("seviye")=25 or cevap=0 or cekil=1 then
 	if session("seviye")=25 then
 	%>
-	Yarışma Bitti
+	YarÄ±ÅŸma Bitti
 	<%
 	end if
 	if cevap=0 and cekil=0 then
 	%>
-	Cevap Yanlış
+	Cevap YanlÄ±ÅŸ
 	<%
 	end if
 	%>
@@ -325,8 +325,8 @@ rsayi=int((rnd * 10000)+ 0)
 		  set yrs = bag.execute("select yarismacilar.* from yarismacilar where yadi='"&Session("byadi")&"'")
 		  if not yrs.eof then
 		  response.write "Puan:"&yrs("puan")&"<br>"
-		  response.write "Bugün "&yrs("hak")&" kere yarıştınız.<br>"
-		  response.write "Yarışmaya katıldığınızdan beri "&yrs("csayisi")&" sorudan "&yrs("dsayisi")&" tanesini <br>doğru olarak cevapladınız."
+		  response.write "BugÃ¼n "&yrs("hak")&" kere yarÄ±ÅŸtÄ±nÄ±z.<br>"
+		  response.write "YarÄ±ÅŸmaya katÄ±ldÄ±ÄŸÄ±nÄ±zdan beri "&yrs("csayisi")&" sorudan "&yrs("dsayisi")&" tanesini <br>doÄŸru olarak cevapladÄ±nÄ±z."
 		  end if
 		  yrs.close
 		  set yrs = nothing
@@ -353,8 +353,8 @@ rsayi=int((rnd * 10000)+ 0)
           <td width="15">&nbsp;</td>
           <td align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
-              <td width="8%" align="center" valign="middle"><span class="style10">Sıra</span></td>
-              <td width="39%" align="center" valign="middle"><span class="style10">Adı</span></td>
+              <td width="8%" align="center" valign="middle"><span class="style10">SÄ±ra</span></td>
+              <td width="39%" align="center" valign="middle"><span class="style10">AdÄ±</span></td>
               <td width="19%" align="center" valign="middle"><span class="style10">Puan</span></td>
               <td width="17%" align="center" valign="middle"><span class="style10">C. Sayisi </span></td>
               <td width="17%" align="center" valign="middle"><span class="style10">D. Sayisi </span></td>
@@ -403,8 +403,8 @@ rsayi=int((rnd * 10000)+ 0)
           <td width="15">&nbsp;</td>
           <td align="center" valign="middle">
             <form id="sorugonder" name="sorugonder" method="post" action="?bolum=sorukaydet">
-			<span class="style13">Formu doldururken eksik bırakmayınız. Çünkü eksik olan sorulara onay verilmez. <br />Doğru cevabı belirtmek için yanındaki tuşa tıklayınız. </span><br />
-              <label><strong>Tür :
+			<span class="style13">Formu doldururken eksik bÄ±rakmayÄ±nÄ±z. Ã‡Ã¼nkÃ¼ eksik olan sorulara onay verilmez. <br />DoÄŸru cevabÄ± belirtmek iÃ§in yanÄ±ndaki tuÅŸa tÄ±klayÄ±nÄ±z. </span><br />
+              <label><strong>TÃ¼r :
               <input type="text" name="tur" />
               </strong></label>
               <strong><br />
@@ -444,7 +444,7 @@ rsayi=int((rnd * 10000)+ 0)
 		</select>
               </label>
               <br />
-		<input type="submit" value="Gönder" />
+		<input type="submit" value="GÃ¶nder" />
                 </strong>
             </form>
 		  </td>
@@ -486,9 +486,9 @@ rsayi=int((rnd * 10000)+ 0)
 		rs.update
 		rs.close
 		set rs = nothing
-		response.write("Sorunuz kaydedilmiştir. Onaylandıktan sonra yayınlanacaktır.")
+		response.write("Sorunuz kaydedilmiÅŸtir. OnaylandÄ±ktan sonra yayÄ±nlanacaktÄ±r.")
 		else
-		response.write("Eksik alanlar var. Geriye tıklayıp eksikleri tamamlayınız.")
+		response.write("Eksik alanlar var. Geriye tÄ±klayÄ±p eksikleri tamamlayÄ±nÄ±z.")
 		end if
 		case else
 	end select
@@ -499,10 +499,10 @@ rsayi=int((rnd * 10000)+ 0)
     <td colspan="2"><table width="100%" height="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
       <tr>
         <td width="17%" align="center" valign="middle"><a href="?bolum=anasayfa" class="link">Anasayfa</a></td>
-        <td width="26%" align="center" valign="middle"><a href="?bolum=sorugonder" class="link">Soru Gönder</a> </td>
+        <td width="26%" align="center" valign="middle"><a href="?bolum=sorugonder" class="link">Soru GÃ¶nder</a> </td>
         <td width="25%" align="center" valign="middle"><a href="?bolum=durum" class="link">Durumunuz</a></td>
-        <td width="16%" align="center" valign="middle"><a href="?bolum=ilk10" class="link">İlk 10 </a></td>
-        <td width="16%" align="center" valign="middle"><a href="javascript:window.close()" class="link">Çıkış</a></td>
+        <td width="16%" align="center" valign="middle"><a href="?bolum=ilk10" class="link">Ä°lk 10 </a></td>
+        <td width="16%" align="center" valign="middle"><a href="javascript:window.close()" class="link">Ã‡Ä±kÄ±ÅŸ</a></td>
       </tr>
     </table></td>
   </tr>

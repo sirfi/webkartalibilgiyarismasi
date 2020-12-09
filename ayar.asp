@@ -1,6 +1,6 @@
 <%
-yonetimsifre="admin" 'Yönetici Þifresi Kesinlikle deðiþtiriniz.
-yarismaciadi=request.querystring("yadi") 'Yarýþmacý adý deðiþkeni. Buraya kendi siteminizdeki session deðiþkenini yazabilirsiniz.
-veritabani=server.mappath("/db/denemebilgiyarismasi.mdb") 'Kullanýcý tarafý için Veritabaný yolu
-veritabaniyonetim=server.mappath("/db/denemebilgiyarismasi.mdb") 'Yönetici tarafý için Veritabaný yolu
+yonetimsifre="admin" 'YÃ¶netici Åžifresi Kesinlikle deÄŸiÅŸtiriniz.
+yarismaciadi=request.querystring("yadi") 'YarÄ±ÅŸmacÄ± adÄ± deÄŸiÅŸkeni. Buraya kendi siteminizdeki session deÄŸiÅŸkenini yazabilirsiniz.
+veritabani=server.mappath("/db/denemebilgiyarismasi.mdb") 'KullanÄ±cÄ± tarafÄ± iÃ§in VeritabanÄ± yolu
+veritabaniyonetim=server.mappath("/db/denemebilgiyarismasi.mdb") 'YÃ¶netici tarafÄ± iÃ§in VeritabanÄ± yolu
 %>

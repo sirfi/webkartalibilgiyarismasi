@@ -12,7 +12,7 @@ end if
 <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
-<title>Giriş</title>
+<title>GiriÅŸ</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@ else
   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family:Arial Black; font-size:8pt" width="100%" >
     <tr>
       <td align="center">
-      <p align="center">ŞİFRE</td>
+      <p align="center">ÅÄ°FRE</td>
     </tr>
     <tr>
       <td align="center">
